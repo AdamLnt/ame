@@ -1,0 +1,312 @@
+/* --------------------------- */
+/*         CORPS DE PAGE      */
+/* --------------------------- */
+body {
+  background-color: lavender; /* Couleur de fond de la page */
+  margin: 0; /* Supprime les marges par défaut du navigateur */
+  padding: 0; /* Supprime le remplissage par défaut du navigateur */
+  display: flex; /* Utilise le modèle de boîte flexible pour le corps */
+  flex-direction: column; /* Empile les éléments de manière verticale */
+  align-items: center; /* Centre horizontalement tous les éléments enfants */
+}
+
+/* --------------------------- */
+/*      CONTENEUR PRINCIPAL   */
+/* --------------------------- */
+.content {
+  text-align: center; /* Centre le texte et les boutons */
+  padding-top: 15px; /* Espace en haut pour aérer le contenu */
+}
+
+/* --------------------------- */
+/*         TITRES             */
+/* --------------------------- */
+h1 {
+  font-size: 3em; /* Taille de la police du titre principal */
+  color: #ff5722; /* Couleur du titre */
+  margin-bottom: 5px; /* Espacement sous le titre */
+}
+
+i {
+  font-size: 1.2em; /* Taille de la police pour le sous-titre */
+  color: #555; /* Couleur du sous-titre */
+  margin-bottom: 5px; /* Espacement sous le sous-titre */
+}
+
+/* --------------------------- */
+/*         MENU DE NAVIGATION  */
+/* --------------------------- */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 5px; /* Espace sous le menu */
+}
+
+.button {
+  display: inline-block; /* Permet d'afficher les liens sur la même ligne */
+  padding: 0.4em 0.8em; /* Espacement interne pour les boutons */
+  background-color: lavender; /* Couleur de fond des boutons */
+  color: black; /* Couleur du texte des boutons */
+  text-decoration: none; /* Supprime le soulignement des liens */
+  border-radius: 0.5em; /* Arrondit les coins des boutons */
+  cursor: pointer; /* Change le curseur en main au survol */
+  font-size: 16pt; /* Taille de la police pour les boutons */
+  margin-bottom: 2px; /* Espacement vertical de 2px entre les boutons */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère sous les boutons */
+  border: none; /* Supprime la bordure des boutons */
+}
+
+.bottom-link {
+  position: fixed;
+  bottom: 20px; /* Ajustez cette valeur pour changer la distance du bas */
+  right: 20px;  /* Ajustez cette valeur pour changer la distance de la droite */
+  padding: 10px 20px;
+  background-color: #45a049; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  text-decoration: none; /* Enlever la décoration de texte par défaut */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.disconnect-button {
+  position: absolute;
+  top: 35px; /* Ajustez cette valeur pour changer la distance du bas */
+  right: 35px;  /* Ajustez cette valeur pour changer la distance de la droite */
+  padding: 10px 20px;
+  background-color: darkred; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  text-decoration: none; /* Enlever la décoration de texte par défaut */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.connect-button {
+  text-align: center;
+  font-size: 30pt;
+  background-color: darkcyan;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+}
+
+.add-video-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: #45a049;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  height: 50px;
+  align-self: center;
+}
+
+.add-video-button:hover {
+  background-color: darkgreen;
+}
+
+.bottom-link:hover {
+  background-color: darkgreen; /* Couleur de fond au survol */
+}
+
+#add_form {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+/* Style de l'arrière-plan sombre */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+/* Bouton pour fermer */
+.close-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* --------------------------- */
+/*       EFFETS HOVER         */
+/* --------------------------- */
+.series:hover {
+  background-color: darkgreen; /* Couleur au survol pour le lien Séries */
+}
+
+.films:hover {
+  background-color: rgb(2, 166, 172); /* Couleur au survol pour le lien Conferences */
+}
+
+.index:hover {
+  background-color: rgb(75, 47, 155); /* Couleur au survol pour le lien Index */
+}
+
+/* --------------------------- */
+/*         IMAGE              */
+/* --------------------------- */
+.image-container {
+  position: absolute; /* Positionnement absolu pour centrer l'image */
+  top: 50%; /* Centre l'image verticalement */
+  left: 50%; /* Centre l'image horizontalement */
+  transform: translate(-50%, -50%); /* Ajuste le positionnement pour le centrer exactement */
+}
+
+.video_img {
+  border: none; /* Supprime la bordure de l'image */
+  margin-top: 5px; /* Espace au-dessus de l'image */
+  box-shadow: none; /* Supprime l'ombre de l'image */
+  height: 250px; /* Hauteur de l'image */
+  width: 250px; /* Largeur de l'image */
+}
+
+/* --------------------------- */
+/*      ANIMATIONS             */
+/* --------------------------- */
+a, h1, button, p, img, .video_box, video {
+  animation: fadeIn 1s ease-in-out; /* Animation pour le fade-in */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Début de l'animation (invisible) */
+    transform: translateY(-10px); /* Déplacement vers le haut */
+  }
+  100% {
+    opacity: 1; /* Fin de l'animation (visible) */
+    transform: translateY(0); /* Retour à la position originale */
+  }
+}
+
+.video_display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 45px;
+  gap: 15px;
+}
+
+.video_box {
+  border: solid black 2px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px grey;
+  padding: 7px;
+}
+
+.title_and_delete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.title_and_delete p {
+  margin: 0;
+  margin-left: 4px;;
+  /* font-weight: bold; */
+  font-family: 'Roboto', sans-serif; 
+}
+
+.video-item {
+  margin: 10px;
+  position: relative; /* Position relative pour la liste des épisodes */
+}
+
+.video-item img {
+  /* height: 200px; */
+  /* width: 140px; */
+  margin-right: 10px; /* Ajout de marge à droite pour l'image */
+}
+
+/* Styles généraux pour le formulaire */
+.add_video_form {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Style pour les étiquettes */
+.add_video_form label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Style pour les champs de saisie */
+.add_video_form input[type="text"],
+.add_video_form select,
+.add_video_form input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Style pour les boutons */
+.add_video_form button {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.add_video_form button[type="submit"] {
+  background-color: #007bff;
+}
+
+.add_video_form button[type="button"].close-btn {
+  background-color: #dc3545;
+}
+
+/* Boutons : effet au survol */
+.add_video_form button:hover {
+  opacity: 0.9;
+}
+
+.trash_can {
+  height: 25px;
+  width: 25px;
+}
+

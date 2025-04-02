@@ -37,7 +37,7 @@ if (isset($_GET['id'])) {
 
     
     if ($stmt->execute()) {
-        header("Location: conferences.php?message=Vidéo supprimée avec succès");
+        header("Location: videos.php?message=Vidéo supprimée avec succès");
         exit();
     } else {
         echo "Problème de suppression";

@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['user_id'] = $user['user_id'];
         $_SESSION['username'] = $user['name'];
         $_SESSION['usertype'] = $user['user_type'];
-        header("Location: conferences.php"); // Rediriger après connexion
+        header("Location: videos.php"); // Rediriger après connexion
         exit;
     } else {
         echo "Nom d'utilisateur ou mot de passe incorrect.";

@@ -1,5 +1,5 @@
 <?php
-header("Location: conferences.php");
+// header("Location: videos.php");
 $config = include 'config.php';
 $host = $config['db_host'];
 $dbname = $config['db_name'];
@@ -16,7 +16,7 @@ try {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = htmlspecialchars(trim($_POST['name']));
     $typeInput = htmlspecialchars($_POST['type']);
-    $type = ($typeInput === "conference") ? 1 : 2;
+    $type = ($typeInput === "cours") ? 1 : 2;
 
     $uploadDirVideo = "../medias/videos/";
     $uploadDirImage = "../medias/images/";

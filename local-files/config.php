@@ -1,6 +1,6 @@
 <?php 
 
-// header("Location: conferences.php");
+// header("Location: videos.php");
 
 return [
     'db_host' => 'localhost',

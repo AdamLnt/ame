@@ -33,7 +33,7 @@ try {
 <body>
     <h1><i>Vidéos</i></h1>
     <?php
-        if ($_SESSION['usertype'] == 1 || $_SESSION['usertype'] == 2) {
+        if ($_SESSION['usertype'] == 1) {
     ?>
         <button class="add-video-button" onclick="openPopup()">Ajouter une vidéo</button> 
     <?php
@@ -41,7 +41,7 @@ try {
     ?>
     <div id="overlay" onclick="closePopup()"></div>
     <?php
-    if ($_SESSION['usertype'] == 1 || $_SESSION['usertype'] == 2) {
+    if ($_SESSION['usertype'] == 1) {
         echo '
     <div id="add_form">
         <form class="add_video_form" action="add_video.php" method="POST" enctype="multipart/form-data">
@@ -78,9 +78,9 @@ try {
             </a>
             <div class="title_and_delete">
                 <p><?= $vid['vid_name']; ?></p>
-                <p><?= ($vid['type'] == 1) ? "Conférence" : "Rediffusion"; ?></p>
+                <p><?= ($vid['type'] == 1) ? "Cours" : "Tutoriel"; ?></p>
                 <?php
-                    if ($_SESSION['usertype'] == 1 || $_SESSION['usertype'] == 2) {
+                    if ($_SESSION['usertype'] == 1) {
                 ?>
                 <a href="delete_video.php?id=<?= $vid['vid_id'];?>"><img class="trash_can" src="../medias/images/trash_can.png"></a>
                 <?php 

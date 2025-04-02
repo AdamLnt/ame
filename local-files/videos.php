@@ -78,7 +78,7 @@ try {
             </a>
             <div class="title_and_delete">
                 <p><?= $vid['vid_name']; ?></p>
-                <p><?= ($vid['type'] == 1) ? "Conférence" : "Rediffusion"; ?></p>
+                <p><?= ($vid['type'] == 1) ? "Cours" : "Tutoriel"; ?></p>
                 <?php
                     if ($_SESSION['usertype'] == 1 || $_SESSION['usertype'] == 2) {
                 ?>

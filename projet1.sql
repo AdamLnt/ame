@@ -41,8 +41,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`user_id`, `name`, `password`, `user_type`) VALUES
-(4, 'admin', 'test1', 1),
-(6, 'employé', 'test2', 3);
+(4, 'prof', 'test1', 1),
+(6, 'eleve', 'test2', 3);
 
 -- --------------------------------------------------------
 

@@ -53,9 +53,9 @@ try {
                 <option value="tutoriel">Tutoriel</option>
             </select><br>
             <label for="file">Fichier vidéo : </label>
-            <input type="file" id="file" name="file">
+            <input type="file" id="file" name="file" accept="video/*">
             <label for="image">Image : </label>
-            <input type="file" id="image" name="image">
+            <input type="file" id="image" name="image" accept="image/*">
             <button type="submit">Ajouter</button>
             <button type="button" class="close-btn" onclick="closePopup()">Fermer</button>
         </form>    

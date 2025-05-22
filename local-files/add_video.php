@@ -1,5 +1,5 @@
 <?php
-// header("Location: videos.php");
+header("Location: videos.php");
 $config = include 'config.php';
 $host = $config['db_host'];
 $dbname = $config['db_name'];
@@ -14,10 +14,16 @@ try {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['name'], $_POST['type'])) {
     $name = htmlspecialchars(trim($_POST['name']));
     $typeInput = htmlspecialchars($_POST['type']);
     $type = ($typeInput === "cours") ? 1 : 2;
+    } 
 
+    else {
+        echo "Champs manquants dans le formulaire.";
+    }
+    
     $uploadDirVideo = "../medias/videos/";
     $uploadDirImage = "../medias/images/";
 
@@ -26,7 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mkdir($uploadDirVideo, 0777, true);
     }
 
-    if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+    if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK 
+    && isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
         
         $allowedVideoTypes = ['mp4', 'avi', 'mov', 'mkv']; 
         $allowedImageTypes = ['jpeg', 'jpg', 'png', 'gif'];
